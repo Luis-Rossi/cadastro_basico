@@ -23,9 +23,9 @@
                     <tbody>
                         {% for pessoa in usuarios %}
                         <tr>
-                            <td>{{pessoa.nome}}</td>
-                            <td>{{pessoa.email}}</td>
-                            <td>{{pessoa.senha}}</td>
+                            <td>{{ pessoa.nome }}</td>
+                            <td>{{ pessoa.email }}</td>
+                            <td>{{ "* " * pessoa.senha|count }}</td>
                             <td>
                                 <a href="/edit/{{pessoa.id}}">Editar</a> | 
                                 <a href="/delete/{{pessoa.id}}">Excluir</a>
@@ -35,10 +35,12 @@
                     </tbody>
 
                 </table>
-            </div>
-            <div class="row col-xs-12">
-                <button type="submit" class="btn btn-block btn-success" onclick="window.location.href='/adiciona'">Adiciona novo usuário</button>
-            </div>
+
+                <div class="row col-xs-12">
+                    <button type="submit" class="btn btn-block btn-success" onclick="window.location.href='/adiciona'">Adiciona novo usuário</button>
+                </div>
+                
+            </div>    
         </div>
     </div>
 
